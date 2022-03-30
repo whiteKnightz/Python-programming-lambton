@@ -49,7 +49,19 @@ second_question()
 
 
 def third_question():
-    add_seperator('3. 8 valid ')
+    add_seperator('3. 8 valid methods of string')
+    data_string = "This man is the greatest footballer of all time"
+    print(f'The data string is:\t\t\"{data_string}\"')
+    print(f'The result of capitalisation is:\t\t\"{data_string.capitalize()}\"')
+    print(f'The result of casefold is:\t\t\"{data_string.casefold()}\"')
+    print(f'The result of count for \"the\" is:\t\t{data_string.count("the")}')
+    print(f'The result of string ending with \"the\" is:\t\t{data_string.endswith("the")}')
+    print(f'The result of centering string with 80 is:{data_string.center(80)}')
+    print(f'The result of encoding with \"ascii\" is:\t\t{data_string.encode(encoding="ascii")}')
+    print(f'The result of finding \"all\" is:\t\t{data_string.find("all")}')
+    data_string = "This man, {player}, is the greatest footballer of all time"
+    print(f'The un-formatted string is:\t\t{data_string}')
+    print(f'The result of formatting of the string is:\t\t{data_string.format(player="Ronaldo Lima")}')
 
 
 third_question()
