@@ -102,9 +102,8 @@ seventh_question()
 
 def eighth_question(original_list):
     add_seperator("Question 8: Reverse the following list using for loop.")
-    original_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     reversed_list = list()
-    for item in reversed(original_list):
+    for item in original_list:
         reversed_list.insert(0, item)
     print(reversed_list)
 
