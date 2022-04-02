@@ -24,11 +24,14 @@ def caesar_cypher(text, cypher_key):
     encoded_string = ""
     for n in range(len(text)):
         char_val = text[n]
-
-        if not char_val.isupper():
-            encoded_string += chr((ord(char_val) + cypher_key - 97) % 26 + 97)
+        char_ord = ord(char_val)
+        if (65 <= char_ord <= 90) or (97 <= char_ord <= 122):
+            if not char_val.isupper():
+                encoded_string += chr((char_ord + cypher_key - 97) % 26 + 97)
+            else:
+                encoded_string += chr((char_ord + cypher_key - 65) % 26 + 65)
         else:
-            encoded_string += chr((ord(char_val) + cypher_key - 65) % 26 + 65)
+            encoded_string += char_val
     return encoded_string
 
 
@@ -39,20 +42,17 @@ print(caesar_cypher(cypher_text, cypher_int))
 
 
 # Part-2) Binary Search Algorithm Implementation in Python
-def binary_search(number_list, low_index, high_index, item_val):
+def recurse_binary_search(number_list, low_index, high_index, item_val):
     if high_index < low_index:
         return -1
     else:
         mid_index = math.floor((high_index + low_index) / 2)
-
         if number_list[mid_index] == item_val:
             return mid_index
-
         elif number_list[mid_index] <= item_val:
-            return binary_search(number_list, mid_index + 1, high_index, item_val)
-
+            return recurse_binary_search(number_list, mid_index + 1, high_index, item_val)
         else:
-            return binary_search(number_list, low_index, mid_index - 1, item_val)
+            return recurse_binary_search(number_list, low_index, mid_index - 1, item_val)
 
 
 add_seperator("Part-2) Binary Search Algorithm Implementation in Python")
@@ -63,7 +63,7 @@ list_of_num.sort()
 print(f'The List is:{list_of_num}')
 item = input_method("Enter A Number to search:")
 
-index_val = binary_search(list_of_num, 0, len(list_of_num) - 1, item)
+index_val = recurse_binary_search(list_of_num, 0, len(list_of_num) - 1, item)
 
 if index_val > -1:
     print(f'The index of item is:{index_val}')
