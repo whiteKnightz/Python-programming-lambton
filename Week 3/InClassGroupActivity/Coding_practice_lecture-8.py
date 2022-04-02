@@ -4,6 +4,20 @@ def add_seperator(msg):
     print("-" * 50)
 
 
+def input_method(msg):
+    valid_input = False
+    while not valid_input:
+        num = input(msg)
+        try:
+            input_value = int(num)
+            if input_value >= 1:
+                return input_value
+            else:
+                print("Not a Valid Number!")
+        except ValueError:
+            print("Not a Valid Number!")
+
+
 def first_question():
     add_seperator("Question 1: Print First 10 natural numbers using while loop")
     for i in range(11):
@@ -23,20 +37,6 @@ def second_question():
 
 
 second_question()
-
-
-def input_method(msg):
-    valid_input = False
-    while not valid_input:
-        num = input(msg)
-        try:
-            input_value = int(num)
-            if input_value >= 1:
-                return input_value
-            else:
-                print("Not a Valid Number!")
-        except ValueError:
-            print("Not a Valid Number!")
 
 
 def third_question():
