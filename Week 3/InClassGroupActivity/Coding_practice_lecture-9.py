@@ -16,7 +16,7 @@ def first_question():
     print(f'Today is: {datetime_now.strftime("%A")}')
 
 
-# first_question()
+first_question()
 
 
 def input_method(msg):
