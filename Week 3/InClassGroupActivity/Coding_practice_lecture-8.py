@@ -1,3 +1,11 @@
+"""
+    Coding Practice 8
+    Abhishek Satyal - C0845420
+    Juan Posso - C0810093
+    Suryansh Gupta - C0855842
+"""
+
+
 def add_seperator(msg):
     print("\n" * 5)
     print(msg)

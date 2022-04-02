@@ -1,3 +1,10 @@
+"""
+    Coding Practice 9
+    Abhishek Satyal - C0845420
+    Juan Posso - C0810093
+    Suryansh Gupta - C0855842
+"""
+
 import datetime
 import math
 from dateutil.relativedelta import relativedelta
@@ -43,7 +50,7 @@ def second_question():
     datetime_next_bd = datetime_bd_this_year if (datetime_bd_this_year >= datetime_now) else datetime_bd_next_year
     print(
         f'You are: {math.floor((datetime_difference.days + datetime_difference.seconds / 86400) / 365.2425)} years old')
-    print(f'Next birthday is in {datetime_next_bd-datetime_now}')
+    print(f'Next birthday is in {datetime_next_bd - datetime_now}')
 
 
 second_question()
@@ -53,7 +60,7 @@ def third_question():
     add_seperator("3. Write a program that takes birthday of a person and calculates the total number of seconds "
                   "they have been living in epoch time")
     datetime_dob = input_method("Add valid date of birth in DD/MM/YY format(Example:22/07/91):\n")
-    datetime_diff = datetime.datetime.now()-datetime_dob
+    datetime_diff = datetime.datetime.now() - datetime_dob
     print(f'You have lived for {datetime_diff.total_seconds()} seconds in epoch time.')
 
 
