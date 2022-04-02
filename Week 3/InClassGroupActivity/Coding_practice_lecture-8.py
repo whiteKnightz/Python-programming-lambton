@@ -20,7 +20,7 @@ def input_method(msg):
 
 def first_question():
     add_seperator("Question 1: Print First 10 natural numbers using while loop")
-    for i in range(11):
+    for i in range(10):
         print(i)
 
 
