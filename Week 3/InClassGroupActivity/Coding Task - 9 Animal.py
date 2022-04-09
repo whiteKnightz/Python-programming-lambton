@@ -61,7 +61,7 @@ tommy_dog.can_make_noise()
 tommy_dog.can_eat()
 tommy_dog.can_run()
 
-add_seperator("Garfield the dog")
+add_seperator("Garfield the cat")
 garfield_dog = Cat("Garfield", 8, "Orange")
 garfield_dog.can_eat()
 garfield_dog.can_make_noise()
