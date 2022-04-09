@@ -34,4 +34,4 @@ class Customer:
 
 cus_address = Address(400, "265 Yorkland Blvd", "ON M2J 1S5", "North York", "Canada")
 cus_juan = Customer("C0810093", "Juan", 18, 90920289298, cus_address, "Platinum Plus")
-print(cus_juan)
+print(f'\n\n\n\n{cus_juan}')
