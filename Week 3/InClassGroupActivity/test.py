@@ -10,3 +10,5 @@ print(round(7.5))
 print(round(6.5))
 print(round(5.5))
 print(round(3.5))
+
+print(not (10==10) and (1==1))
